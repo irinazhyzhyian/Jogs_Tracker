@@ -1,0 +1,94 @@
+@import '../../variables.scss';
+.Header {
+    background-color: $green;
+    //height: 116px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    width: 100vw;
+
+    @media (min-width: 375px) {
+        width: 100%;
+    }
+
+    .Logo {
+        margin-left: 37px;
+        width: 147px;
+        height: 56px;
+        background: url('../../Assets/logo.svg') no-repeat;
+    }
+
+    .Menu-Items {
+        font-family: SFUIText;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 50px 50px 104px 40px;
+        grid-column-gap: 20px;
+        
+        .Link {
+            color: $white-two;
+            text-decoration: none;
+            padding-top: 10px;
+        }
+        
+        .Filter {
+            width: 39px;
+            height: 39px;
+            background: url('../../Assets/filter-active.svg') no-repeat;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    .Mobile-Menu{
+        height: 56px;
+        width: 56px;
+        margin-top: 24px;
+        margin-left: 51px;
+        padding: 0;
+        background: url('../../Assets/menu.png') no-repeat;
+
+        @media screen and (min-width: 600px) {
+            display: none;
+        }
+    }
+
+    .Mobile-Menu-Items {
+        width: 100vw;
+        height: 85vh;
+        background: white;
+        display: grid;
+        /* z-index: 1000; */
+        /* margin-top: 0; */
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+
+        font-family: SFUIText;
+        font-size: 24px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+            
+        .Link {
+            color: #333333;
+            text-decoration: none;
+            padding-top: 10px;
+        }
+    }
+}

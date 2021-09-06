@@ -1,0 +1,128 @@
+@import '../../variables.scss';
+
+.Jog-container{
+    display: grid;
+    grid-template-columns: 49% 51%;
+    width: 240px;
+    padding: 19px;
+
+    .Joger-img{
+        width: 87px;
+        height: 87px;
+        background: url('../../Assets/joger.svg');
+    }
+
+    .D-flex {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 5px;
+    }
+
+    .Details {
+        padding-top: 0.5rem;
+        .Date{
+            display: flex;
+            font-family: SFUIText;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #aaa2a2;
+        }
+
+        .Title {
+            font-family: SFUIText;
+            font-size: 14px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #646464;
+            padding-right: 6px;
+        }
+
+        .Value {
+            font-family: SFUIText;
+            font-size: 14px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #999999;
+        }
+    }
+}
+
+.Layer {
+    z-index: 10;
+    background-color: $white-two;
+    .Jog-form {
+        background: $green;
+        margin-top: 9%;
+        width: 503px;
+        //height: 379px;
+        /* margin: 118px 468px 0 469px; */
+        /* padding: 24px 27px 47px 88px; */
+        padding: 65px;
+        border-radius: 44px;
+        z-index: 11;
+    
+        .Row-el {
+            display: grid;
+            grid-template-columns: 19% 65%;
+            align-content: stretch;
+            //justify-content: center;
+            align-items: center;
+            justify-items: start;
+            margin: 30px 16.2px 53px 0;
+            font-family: SFUIText;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+        }
+    
+        .Save-btn {
+            width: 203px;
+            height: 20px;
+            margin: 46px 38px 0 3px;
+            padding: 14px 124.4px 13px 124.4px;
+            border-radius: 25.2px;
+            border: solid 2px $white-two;
+            color: $white-two;
+            font-family: SFUIText;
+            font-size: 12.6px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: #9ff146;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 245px;
+
+            .Save-btn {
+                width: auto;
+                padding: 14px 12px 13px 12px;
+            }
+
+            .Row-el {
+                margin: 0;
+                grid-template-columns: 25% 65%;
+            }
+        }
+    }
+}

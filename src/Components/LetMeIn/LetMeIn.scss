@@ -1,0 +1,81 @@
+@import '../../variables.scss';
+
+.Let-me-in-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+
+    .Rectangle-4 {
+        width: 503px;
+        height: 379px;
+        padding: 77px 171px 36px 172px;
+        border-radius: 44px;
+        background-color: $baby-purple;
+
+        @media screen and (max-width: 600px) {
+            width: 68px;
+            height: 0;
+            background-color: transparent;
+            padding: 60px 185px 50px 48px;
+        }
+    
+        .bear-face {
+            width: 160px;
+            height: 150px;
+            margin: 0 0 56px;
+            padding: 0.1px 0.2px 0px 0.2px;
+            object-fit: contain;
+            background: url('../../Assets/bear-face.svg') no-repeat;
+
+            @media screen and (max-width: 600px) {
+                width: 160px;
+                height: 150px;
+                margin: 0 37px 0;
+                background: url('../../Assets/bearFace.png') no-repeat;
+            }
+
+        }
+    
+        .Rectangle-2 {
+            width: 151px;
+            height: 60px;
+            margin: 0 auto;
+            margin-top: 56px;
+            padding: 20px 34px 19px;
+            border-radius: 36px;
+            border: solid 3px $white-two;
+            justify-content: center;
+            display: flex;
+            cursor: pointer;
+
+            &:hover {
+                background: $baby-purple;
+                opacity: 0.7;
+            }
+    
+            .Let-me-in {
+                width: 83px;
+                height: 21px;
+                color: $white-two;
+                font-family: SFUIText;
+                font-size: 18px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+
+                @media screen and (max-width: 600px) {
+                    color: $baby-purple;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                border: solid 3px $baby-purple;
+            }
+            
+        }
+    }
+
+}
+

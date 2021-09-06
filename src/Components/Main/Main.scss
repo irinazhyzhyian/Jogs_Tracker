@@ -1,0 +1,64 @@
+@import '../../variables.scss';
+
+.Main-container {
+    width: 100%;
+    .Rectangle {
+        display: grid;
+        height: 60px;
+        align-content: space-around;
+        justify-content: center;
+        background-color: $white;
+
+        @media screen and (max-width: 600px) {
+            width: 100vw;
+        }
+
+        .Date-text {
+            width: 61px;
+            height: 15px;
+            margin: 8px 15px 8px 0;
+            font-family: SFUIText;
+            font-size: 13px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+          }
+
+        .Grid-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 50px;
+            width: 512px;
+
+            .Small-col {
+                display: grid;
+                grid-template-columns: 0.3fr 1fr;
+                align-content: space-evenly;
+            }
+
+            @media screen and (max-width: 600px) {
+                grid-template-columns: 0.1fr 0.1fr;
+                grid-column-gap: 43px;
+                width: 374px;
+
+                .Small-col {
+                    grid-template-columns: 0.1fr 0.1fr;
+                }
+            }
+        }
+    }
+    .Jogs{
+        display: grid;
+        justify-content: center;
+        overflow-y: auto;
+        height: 69vh;
+
+        @media screen and (max-width: 600px) {
+            width: 100vw;
+            height: 63vh;
+        }
+    }
+}

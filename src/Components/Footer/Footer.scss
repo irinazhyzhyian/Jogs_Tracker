@@ -1,0 +1,12 @@
+.Footer {
+    display: grid;
+    justify-content: end;
+    padding-right: 40px;
+
+    .Add {
+        width: 60px;
+        height: 60px;
+        background: url('../../Assets/add.svg') no-repeat;
+        cursor: pointer;
+    }
+}

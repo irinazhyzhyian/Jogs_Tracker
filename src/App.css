@@ -1,5 +1,19 @@
+body {
+  margin: 0;
+  overflow-y: hidden;
+}
+
+@font-face {
+  font-family: "SFUIText"; 
+  src: url("./fonts/SFUITextRegular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+  }
+
 .App {
-  text-align: center;
+  text-align: center; 
+  display: grid;
+  justify-items: center;
 }
 
 .App-logo {
