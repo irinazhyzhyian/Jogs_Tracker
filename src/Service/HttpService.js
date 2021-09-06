@@ -14,7 +14,6 @@ export class HttpService {
         this.postPure = this.postPure.bind(this);
         this.toFormData = this.toFormData.bind(this);
         this.isAuthTokenValid = this.isAuthTokenValid.bind(this)
-        this.setToken = this.setToken.bind(this)
     }
 
 
@@ -35,7 +34,7 @@ export class HttpService {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': 'Bearer ' + this.access_token,
+                'Authorization': 'Bearer ' + localStorage.getItem('token'),
             }
         })
             .then((response) => {

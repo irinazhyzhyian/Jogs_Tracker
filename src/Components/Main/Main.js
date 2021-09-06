@@ -1,4 +1,3 @@
-import moment from 'moment';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
@@ -12,10 +11,11 @@ const Main = () => {
 
     const processing = useSelector(state => state.jogs.processing);
     const jogs = useSelector(state => state.jogs.filteredJogs);
+    const isAuth = useState(localStorage.getItem('token'));
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if(!jogs.length) {
+        if(!jogs.length && isAuth) {
             dispatch(actions.JogsActions.getJogs());
         }
     }, []);

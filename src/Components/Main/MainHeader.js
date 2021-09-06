@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import BearFace from '../../Assets/bear-face.svg';
 import Input from '../UI/Input/Input';
 import './Main.scss';
 

@@ -8,7 +8,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import Info from './Components/Info/Info';
 import JogForm from './Components/Jog/JogForm';
 import NothingFound from './Components/NothingFound/NothingFound';
-import PrivateRoute from './Components/PrivateRoute';
+
+const PrivateRoute = ({ component, ...options }) => {
+  const user = localStorage.getItem('token');
+  const finalComponent = user ? component : LetMeIn;
+
+  return <Route {...options} component={finalComponent} />;
+};
 
 function App() {
   return (
@@ -19,7 +25,7 @@ function App() {
             <Route path="/sign-in" component={LetMeIn} />
             <PrivateRoute path="/info" component={Info} />
             <PrivateRoute exact path="/jog-form" component={JogForm} />
-            <Route exact path="/" component={Main} />
+            <PrivateRoute exact path="/" component={Main} />
             <Route path="*" component={NothingFound} />
         </Switch>
     </div>
